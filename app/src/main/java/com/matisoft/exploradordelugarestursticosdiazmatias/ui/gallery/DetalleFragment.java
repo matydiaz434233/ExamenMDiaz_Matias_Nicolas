@@ -39,8 +39,8 @@ public class DetalleFragment extends Fragment {
             @Override
             public void onChanged(List<Lugar> lugares) {
                 if (lugares != null && !lugares.isEmpty()) {
-                    Lugar lugar = lugares.get(0); // Obtén el primer lugar (puedes ajustar esto según tu lógica)
-                    String horario = lugar.getHorariosApertura(); // Suponiendo que Lugar tiene un método getHorario()
+                    Lugar lugar = lugares.get(0);
+                    String horario = lugar.getHorariosApertura();
                     binding.tvHorario.setText(horario);
                 }
             }

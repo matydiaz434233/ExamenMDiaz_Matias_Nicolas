@@ -22,13 +22,9 @@ public class DetalleViewModel extends ViewModel {
     }
     public void obtenerDetalles(Bundle bundle) {
         if (bundle != null) {
-            // Obtén la cadena JSON del Bundle
             String lugaresJson = bundle.getString("detalle");
-
             if (lugaresJson != null) {
-                // Convierte la cadena JSON de nuevo a una lista de objetos Lugar
                 List<Lugar> lugares = convertirJsonAListaLugares(lugaresJson);
-                // Ahora puedes usar la lista de lugares en este método
                 mDetalle.setValue(lugares);
             }
         }

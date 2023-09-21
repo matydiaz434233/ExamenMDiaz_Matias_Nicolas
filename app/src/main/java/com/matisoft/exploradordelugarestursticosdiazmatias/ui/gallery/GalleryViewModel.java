@@ -20,7 +20,7 @@ public class GalleryViewModel extends AndroidViewModel {
 
     public GalleryViewModel(@NonNull Application application) {
         super(application);
-        listaMutable = new MutableLiveData<>(); // Inicializa listaMutable aquí
+        listaMutable = new MutableLiveData<>(); // Inicializa listaMutable
     }
 
     public LiveData<List<Lugar>> getListaMutable(){

@@ -42,8 +42,6 @@ public class GalleryFragment extends Fragment {
         galleryViewModel.getListaMutable().observe(getViewLifecycleOwner(), new Observer<List<Lugar>>() {
             @Override
             public void onChanged(List<Lugar> lugars) {
-
-
                 adapter.setListaLugares(lugars);
                 //adapter.notifyDataSetChanged();
             }
