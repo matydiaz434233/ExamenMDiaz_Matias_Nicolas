@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.matisoft.exploradordelugarestursticosdiazmatias.ui.home.HomeFragment"
+        android:label="MAPA"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.matisoft.exploradordelugarestursticosdiazmatias.ui.gallery.GalleryFragment"
+        android:label="LISTA DE LUGARES"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_detalle"
+            app:destination="@id/nav_detalle" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.matisoft.exploradordelugarestursticosdiazmatias.ui.slideshow.SlideshowFragment"
+        android:label="CONFIGURACIONES"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.matisoft.exploradordelugarestursticosdiazmatias.ui.salir.SalirFragment"
+        android:label="Cerrar Programa"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_detalle"
+        android:name="com.matisoft.exploradordelugarestursticosdiazmatias.ui.salir.SalirFragment"
+        android:label="DETALLES"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_detalle_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
+</navigation>
